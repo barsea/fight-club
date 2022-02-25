@@ -62,25 +62,22 @@ Fight Club（仮）
 | nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| date_of_birth      | date   | null: false               |
+| fav_fighter        | string |                           |
+| fav_promotion      | string |                           |
+| fav_competition    | string |                           |
+| profile            | string |                           |
 
 ### Association
 
 - has_many :items
-- has_many :orders
 
 ## items テーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| title              | string     | null: false                    |
+| url                | string     | null: false                    |
 | description        | text       | null: false                    |
-| category_id        | integer    | null: false                    |
-| condition_id       | integer    | null: false                    |
-| delivery_charge_id | integer    | null: false                    |
-| prefecture_id      | integer    | null: false                    |
-| days_to_ship_id    | integer    | null: false                    |
-| price              | integer    | null: false                    |
+| tag                | string     |                                |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
